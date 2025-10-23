@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DCS Programs Download</title>
+</head>
+<body>
+  
+
+    <button onclick="downloadProgram('college website.docx')">College Website</button><br><br>
+    <button onclick="downloadProgram('create rss feed using php.docx')">RSS Feed Creator</button><br><br>
+    <button onclick="downloadProgram('crud program.docx')">CRUD Operations</button><br><br>
+    <button onclick="downloadProgram('customize page through admn panel.docx')">Admin Panel Customizer</button><br><br>
+    <button onclick="downloadProgram('discussin board.docx')">Discussion Board</button><br><br>
+    <button onclick="downloadProgram('employee payslip.docx')">Employee Payslip System</button><br><br>
+    <button onclick="downloadProgram('inheritance.docx')">Inheritance System</button><br><br>
+    <button onclick="downloadProgram('login authentication.docx')">Login Authentication</button><br><br>
+    <button onclick="downloadProgram('mail.docx')">Email System</button><br><br>
+    <button onclick="downloadProgram('upload a file in php.docx')">File Upload System</button><br><br>
+
+    <script>
+        function downloadProgram(filename) {
+            const link = document.createElement('a');
+            link.href = filename;
+            link.download = filename;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>
