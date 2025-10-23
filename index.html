@@ -5,18 +5,47 @@
     <title>DCS Programs Download</title>
 </head>
 <body>
-  
 
-    <button onclick="downloadProgram('college website.docx')">College Website</button><br><br>
-    <button onclick="downloadProgram('create rss feed using php.docx')">RSS Feed Creator</button><br><br>
-    <button onclick="downloadProgram('crud program.docx')">CRUD Operations</button><br><br>
-    <button onclick="downloadProgram('customize page through admn panel.docx')">Admin Panel Customizer</button><br><br>
-    <button onclick="downloadProgram('discussin board.docx')">Discussion Board</button><br><br>
-    <button onclick="downloadProgram('employee payslip.docx')">Employee Payslip System</button><br><br>
-    <button onclick="downloadProgram('inheritance.docx')">Inheritance System</button><br><br>
-    <button onclick="downloadProgram('login authentication.docx')">Login Authentication</button><br><br>
-    <button onclick="downloadProgram('mail.docx')">Email System</button><br><br>
-    <button onclick="downloadProgram('upload a file in php.docx')">File Upload System</button><br><br>
+
+    <h3>College Website</h3>
+    <button onclick="downloadProgram('college website.docx')">Download</button>
+    <button onclick="copyProgram('college website.docx')">Copy</button><br><br>
+
+    <h3>RSS Feed Creator</h3>
+    <button onclick="downloadProgram('create rss feed using php.docx')">Download</button>
+    <button onclick="copyProgram('create rss feed using php.docx')">Copy</button><br><br>
+
+    <h3>CRUD Operations</h3>
+    <button onclick="downloadProgram('crud program.docx')">Download</button>
+    <button onclick="copyProgram('crud program.docx')">Copy</button><br><br>
+
+    <h3>Admin Panel Customizer</h3>
+    <button onclick="downloadProgram('customize page through admn panel.docx')">Download</button>
+    <button onclick="copyProgram('customize page through admn panel.docx')">Copy</button><br><br>
+
+    <h3>Discussion Board</h3>
+    <button onclick="downloadProgram('discussin board.docx')">Download</button>
+    <button onclick="copyProgram('discussin board.docx')">Copy</button><br><br>
+
+    <h3>Employee Payslip System</h3>
+    <button onclick="downloadProgram('employee payslip.docx')">Download</button>
+    <button onclick="copyProgram('employee payslip.docx')">Copy</button><br><br>
+
+    <h3>Inheritance System</h3>
+    <button onclick="downloadProgram('inheritance.docx')">Download</button>
+    <button onclick="copyProgram('inheritance.docx')">Copy</button><br><br>
+
+    <h3>Login Authentication</h3>
+    <button onclick="downloadProgram('login authentication.docx')">Download</button>
+    <button onclick="copyProgram('login authentication.docx')">Copy</button><br><br>
+
+    <h3>Email System</h3>
+    <button onclick="downloadProgram('mail.docx')">Download</button>
+    <button onclick="copyProgram('mail.docx')">Copy</button><br><br>
+
+    <h3>File Upload System</h3>
+    <button onclick="downloadProgram('upload a file in php.docx')">Download</button>
+    <button onclick="copyProgram('upload a file in php.docx')">Copy</button><br><br>
 
     <script>
         function downloadProgram(filename) {
@@ -26,6 +55,12 @@
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
+        }
+
+        function copyProgram(filename) {
+            navigator.clipboard.writeText(filename).then(function() {
+                alert('Copied: ' + filename);
+            });
         }
     </script>
 </body>
